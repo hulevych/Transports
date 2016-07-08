@@ -29,6 +29,7 @@ public class Servico {
 		try{
 			String name = "Transporte";
 			int contagem=1;
+			boolean personalizado =false;
 
 			File f = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getParentFile().getAbsolutePath() + "/Transportes/");
 			if(!f.exists())
@@ -38,6 +39,7 @@ public class Servico {
 
 			try {
 				reader = new BufferedReader(new InputStreamReader(new FileInputStream(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getParentFile().getAbsolutePath() + "/Transportes/" + name + contagem + ".txt")));
+				personalizado=true;
 			}
 			catch(FileNotFoundException e){
 				reader = new BufferedReader(new InputStreamReader(am.open(name+contagem+".txt")));
@@ -99,10 +101,13 @@ public class Servico {
 				contagem++;
 
 				try {
-					reader = new BufferedReader(new InputStreamReader(new FileInputStream(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getParentFile().getAbsolutePath() + "/Transportes/" + name + contagem + ".txt")));
+					if(personalizado)
+						reader = new BufferedReader(new InputStreamReader(new FileInputStream(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getParentFile().getAbsolutePath() + "/Transportes/" + name + contagem + ".txt")));
+					else
+						reader = new BufferedReader(new InputStreamReader(am.open(name+contagem+".txt")));
 				}
 				catch(FileNotFoundException e){
-					reader = new BufferedReader(new InputStreamReader(am.open(name+contagem+".txt")));
+
 				}
 			}
 			reader.close();
