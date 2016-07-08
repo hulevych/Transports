@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.hulevych.transportes.MainActivity"
+    android:background="#6b6969">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#6b6969">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Nome Transporte"
+                android:id="@+id/nome"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:textColor="#efe4e4" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/origem1"
+            android:layout_marginTop="7dp"
+            android:background="#a0a4a6"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/origem"
+                android:spinnerMode="dropdown"
+                android:focusableInTouchMode="false"
+                android:contextClickable="false"
+                android:focusable="false"
+                android:textSize="5dp"
+                android:nestedScrollingEnabled="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/destino1"
+            android:layout_marginTop="7dp"
+            android:background="#a0a4a6"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/destino"
+                android:spinnerMode="dropdown"
+                android:textSize="35dp"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="00:00"
+                android:id="@+id/hora1"
+                android:layout_below="@+id/destino1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="30dp"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="00:00"
+                android:id="@+id/hora2"
+                android:layout_marginTop="23dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="30dp"
+                android:layout_below="@+id/hora1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="00:00"
+                android:id="@+id/hora3"
+                android:layout_marginTop="23dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/hora2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="30dp"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="00:00"
+                android:id="@+id/hora4"
+                android:layout_alignTop="@+id/hora1"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:textSize="30dp"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:id="@+id/hora5"
+                android:layout_alignBottom="@+id/hora2"
+                android:layout_alignRight="@+id/hora4"
+                android:layout_alignEnd="@+id/hora4"
+                android:textSize="30dp"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="00:00"
+                android:id="@+id/hora6"
+                android:textSize="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignLeft="@+id/hora5"
+                android:layout_alignStart="@+id/hora5"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Origem"
+                android:id="@+id/textView"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/nome"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="#efe4e4"
+                android:textSize="20dp"
+                android:textIsSelectable="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Destino Final"
+                android:layout_marginTop="15dp"
+                android:id="@+id/textView2"
+                android:layout_below="@+id/origem1"
+                android:textColor="#efe4e4"
+                android:textSize="20dp" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

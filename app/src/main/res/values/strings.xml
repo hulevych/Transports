@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Transportes</string>
+
+    <string-array name="android_dropdown_arrays">
+        <item>Choose a Item</item>
+        <item>Drop Down List 1</item>
+    </string-array>
+</resources>
