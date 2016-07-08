@@ -107,7 +107,7 @@ public class Servico {
 						reader = new BufferedReader(new InputStreamReader(am.open(name+contagem+".txt")));
 				}
 				catch(FileNotFoundException e){
-
+					return;
 				}
 			}
 			reader.close();
